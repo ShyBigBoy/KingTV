@@ -1,5 +1,7 @@
 package com.king.tv.http.converter;
 
+import android.util.Log;
+
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
@@ -19,6 +21,7 @@ public final class GsonResponseBodyConverter<T> implements Converter<ResponseBod
     }
 
     @Override public T convert(ResponseBody value) throws IOException {
+        Log.i("KingTV", "GsonResponseBodyConverter.convert value=" + value.string());
 
         JsonReader jsonReader = gson.newJsonReader(value.charStream());
         try {

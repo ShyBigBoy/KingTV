@@ -50,7 +50,10 @@ public class CategoryPresenter extends BasePresenter<ICategoryView> {
 
                     @Override
                     public void onNext(final List<LiveCategory> list) {
-                        LogUtils.d("Response:" + list);
+                        for (LiveCategory liveCategory : list) {
+                            LogUtils.d("Response: " + liveCategory);
+                        }
+                        LogUtils.d("size=" + list.size());
 
                         ThreadPoolManager.getInstance().execute(new Runnable() {
                             @Override

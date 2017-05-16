@@ -15,6 +15,7 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+//import com.king.tv.http.converter.GsonConverterFactory;
 
 /**
  * @author Jenly <a href="mailto:jenly1314@gmail.com">Jenly</a>
